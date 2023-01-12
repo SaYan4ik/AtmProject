@@ -23,6 +23,7 @@ class BankLocationMapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getBankInfo()
+        self.view.backgroundColor = .systemGreen
     }
     
     func getBankInfo() {
@@ -38,7 +39,6 @@ class BankLocationMapController: UIViewController {
             mark.title = bank.addressType + bank.address + bank.numHouse
             mark.snippet = " Время работы \(bank.warkTime)"
             mark.icon = GMSMarker.markerImage(with: .orange)
-            
             mapView.selectedMarker = mark
             mapView.selectedMarker = nil
             marks.append(mark)
