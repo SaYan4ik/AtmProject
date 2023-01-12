@@ -20,7 +20,6 @@ final class GetBankInfo {
                     guard let bank = try? response.mapArray(BankModel.self) else { return }
                     complition(bank)
                 case .failure(let error):
-                    print(error.localizedDescription)
                     failure?()
             }
         }
